@@ -9,7 +9,7 @@ const Calculator = () => {
     const [height, setHeight] = useState({ ft: 0, in: 0, cm: 0 });
     const [weight, setWeight] = useState({ st: 0, lbs: 0, kg: 0 });
     const [bmi, setBmi] = useState('');
-    const [ bmiCalculated, setBmiCalculated] = useState(false); 
+    const [bmiCalculated, setBmiCalculated] = useState(false); 
     const [bmiMessage, setBmiMessage] = useState('');
 
     const handleUnitChange = (event) => {
