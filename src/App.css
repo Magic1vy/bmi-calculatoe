@@ -105,6 +105,7 @@ input{
   background: #253347;
   border: 1px solid #D8E2E7;
   border-radius: 12px;
+ 
 }
 
 .input-with-unit input:focus {
@@ -207,7 +208,7 @@ h3{
   width: 365px;
 }
 .bmi-limitations{  
-  padding: 120px 140px;
+  padding: 20px 140px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(3, 1fr);

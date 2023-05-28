@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import UnitsSelector from './UnitsSelector';
 import HeightInput from './HeightInput';
 import WeightInput from './WeightInput';
@@ -12,23 +12,7 @@ const Calculator = () => {
     const [bmiCalculated, setBmiCalculated] = useState(false); 
     const [bmiMessage, setBmiMessage] = useState('');
 
-    const handleUnitChange = (event) => {
-        setUnits(event.target.value);
-        setHeight({ ft: 0, in: 0, cm: 0 });
-        setWeight({ st: 0, lbs: 0, kg: 0 });
-        setBmi('');
-        setBmiMessage('');
-    };
-
-    const handleHeightChange = (unit) => (event) => {
-        setHeight({ ...height, [unit]: parseFloat(event.target.value) });
-    };
-
-    const handleWeightChange = (unit) => (event) => {
-        setWeight({ ...weight, [unit]: parseFloat(event.target.value) });
-    };
-
-    const calculateBmi = () => {
+    const calculateBmi = useCallback(() => {
         let totalHeight = 0;
         let totalWeight = 0;
     
@@ -67,8 +51,36 @@ const Calculator = () => {
             setBmiMessage(weightDifference);
             setBmiCalculated(true);
         }
-    };
+    }, [height, weight, units]);
     
+
+    useEffect(() => {
+        if (units === 'Metric') {
+            if (height.cm > 0 && weight.kg > 0) {
+                calculateBmi();
+            }
+        } else {
+            if ((height.ft > 0 || height.in > 0) && (weight.st > 0 || weight.lbs > 0)) {
+                calculateBmi();
+            }
+        }
+    }, [height, weight, calculateBmi, units]);
+
+    const handleUnitChange = (event) => {
+        setUnits(event.target.value);
+        setHeight({ ft: 0, in: 0, cm: 0 });
+        setWeight({ st: 0, lbs: 0, kg: 0 });
+        setBmi('');
+        setBmiMessage('');
+    };
+
+    const handleHeightChange = (unit) => (event) => {
+        setHeight({ ...height, [unit]: parseFloat(event.target.value) });
+    };
+
+    const handleWeightChange = (unit) => (event) => {
+        setWeight({ ...weight, [unit]: parseFloat(event.target.value) });
+    };
 
     const handleKeyUp = (event) => {
         if (event.key === 'Enter') {
@@ -94,4 +106,3 @@ const Calculator = () => {
 };
 
 export default Calculator;
-
