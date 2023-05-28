@@ -88,6 +88,14 @@ input{
   display: flex;
 }
 
+.unit{
+  color: #345FF6;
+  z-index: 1;
+  position: relative;
+  left: -50px;
+  top: 20px;
+  font-size: 24px;
+}
 .input-with-unit input {
   border: none;
   padding: 5px;
@@ -122,14 +130,7 @@ input[type="number"]:focus {
     -moz-appearance: textfield;
 }
 
-#unit-kg, #unit-cm, #unit-st, #unit-ft, #unit-in, #unit-lbs{
-  color: #345FF6;
-  z-index: 1;
-  position: relative;
-  left: -50px;
-  top: 20px;
-  font-size: 24px;
-}
+
 .result-means{
   display: flex;
   align-items: flex-end;
@@ -368,13 +369,31 @@ article p{
   .tips-component{
     padding: 0;
   }
-  #unit-kg, #unit-cm, #unit-st, #unit-ft, #unit-in, #unit-lbs{
-    left: 151px;
-    top: -46px;
-  }
   .tip{
     align-items: center;
     justify-content: center;
   }
 
+  .input-with-unit {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .input-with-unit input {
+    padding-right: 30px; 
+  }
+  
+  .input-with-unit span {
+    top: 50%;
+  }
+  .hero-input-raw{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media all and (max-width:320px) {
+  .unit {
+    left: auto;
+  }
 }

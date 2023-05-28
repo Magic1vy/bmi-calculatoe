@@ -13,7 +13,7 @@ const HeightInput = ({ units, height, handleHeightChange, handleKeyUp }) => (
           onChange={handleHeightChange('cm')}
           onKeyUp={handleKeyUp}
         />
-        <span id="unit-cm">cm</span>
+        <span  className="unit">cm</span>
       </div>
     ) : (
       <div className="input-with-unit">
@@ -25,7 +25,7 @@ const HeightInput = ({ units, height, handleHeightChange, handleKeyUp }) => (
           onChange={handleHeightChange('ft')}
           onKeyUp={handleKeyUp}
         />
-        <span id="unit-ft">ft</span>
+        <span  className="unit">ft</span>
         <input 
           type="number"
           id="height-input-in"
@@ -34,7 +34,7 @@ const HeightInput = ({ units, height, handleHeightChange, handleKeyUp }) => (
           onChange={handleHeightChange('in')}
           onKeyUp={handleKeyUp}
         />
-        <span id="unit-in">in</span>
+        <span  className="unit">in</span>
       </div>
     )}
   </div>

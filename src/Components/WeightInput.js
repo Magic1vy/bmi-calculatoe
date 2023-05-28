@@ -11,7 +11,7 @@ const WeightInput = ({ units, weight, handleWeightChange, handleKeyUp }) => (
                 onChange={handleWeightChange('kg')}
                 onKeyUp={handleKeyUp}
             />
-            <span id="unit-kg">kg</span>
+            <span  className="unit">kg</span>
             </div>
         ) : (
             <div className="input-with-unit">
@@ -23,7 +23,7 @@ const WeightInput = ({ units, weight, handleWeightChange, handleKeyUp }) => (
                 onChange={handleWeightChange('st')}
                 onKeyUp={handleKeyUp}
             />
-            <span id="unit-st">st</span>
+            <span  className="unit">st</span>
             <input 
                 type="number"
                 id="weight-input-lbs"
@@ -32,7 +32,7 @@ const WeightInput = ({ units, weight, handleWeightChange, handleKeyUp }) => (
                 onChange={handleWeightChange('lbs')}
                 onKeyUp={handleKeyUp}
             />
-            <span id="unit-lbs">lbs</span>
+            <span  className="unit">lbs</span>
             </div>
         )}
         </div>
