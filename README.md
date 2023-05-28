@@ -6,7 +6,7 @@ This is a solution to the [Body Mass Index Calculator challenge on Frontend Ment
 
 ### Screenshot
 
-![](./screenshot.png)
+![](./src/assets/screenshot.png)
 
 
 ### Links
