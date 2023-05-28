@@ -93,7 +93,7 @@ input{
   z-index: 1;
   position: relative;
   left: -50px;
-  top: 20px;
+  top: 5px;
   font-size: 24px;
 }
 .input-with-unit input {

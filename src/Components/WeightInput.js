@@ -3,6 +3,7 @@ const WeightInput = ({ units, weight, handleWeightChange, handleKeyUp }) => (
         <label>Weight</label>
         {units === 'Metric' ? (
             <div className="input-with-unit">
+                <div style={{whiteSpace: 'nowrap'}}>
             <input 
                 type="number"
                 id="weight-input"
@@ -13,8 +14,10 @@ const WeightInput = ({ units, weight, handleWeightChange, handleKeyUp }) => (
             />
             <span  className="unit">kg</span>
             </div>
+            </div>
         ) : (
             <div className="input-with-unit">
+                <div style={{whiteSpace: 'nowrap'}}>
             <input 
                 type="number"
                 id="weight-input-st"
@@ -24,6 +27,8 @@ const WeightInput = ({ units, weight, handleWeightChange, handleKeyUp }) => (
                 onKeyUp={handleKeyUp}
             />
             <span  className="unit">st</span>
+            </div>
+            <div style={{whiteSpace: 'nowrap'}}>
             <input 
                 type="number"
                 id="weight-input-lbs"
@@ -33,6 +38,7 @@ const WeightInput = ({ units, weight, handleWeightChange, handleKeyUp }) => (
                 onKeyUp={handleKeyUp}
             />
             <span  className="unit">lbs</span>
+            </div>
             </div>
         )}
         </div>

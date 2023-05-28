@@ -5,6 +5,7 @@ const HeightInput = ({ units, height, handleHeightChange, handleKeyUp }) => (
     <label>Height</label>
     {units === 'Metric' ? (
       <div className="input-with-unit">
+        <div style={{whiteSpace: 'nowrap'}}>
         <input 
           type="number"
           id="height-input"
@@ -14,9 +15,11 @@ const HeightInput = ({ units, height, handleHeightChange, handleKeyUp }) => (
           onKeyUp={handleKeyUp}
         />
         <span  className="unit">cm</span>
+        </div>
       </div>
     ) : (
       <div className="input-with-unit">
+        <div style={{whiteSpace: 'nowrap'}}>
         <input 
           type="number"
           id="height-input-ft"
@@ -26,6 +29,8 @@ const HeightInput = ({ units, height, handleHeightChange, handleKeyUp }) => (
           onKeyUp={handleKeyUp}
         />
         <span  className="unit">ft</span>
+        </div>
+        <div style={{whiteSpace: 'nowrap'}}>
         <input 
           type="number"
           id="height-input-in"
@@ -35,6 +40,7 @@ const HeightInput = ({ units, height, handleHeightChange, handleKeyUp }) => (
           onKeyUp={handleKeyUp}
         />
         <span  className="unit">in</span>
+        </div>
       </div>
     )}
   </div>
