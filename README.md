@@ -6,12 +6,12 @@ This is a solution to the [Body Mass Index Calculator challenge on Frontend Ment
 
 ### Screenshot
 
-![](./assets/screenshot.jpg)
+![](./src/assets/screenshot.png)
 
 
 ### Links
 
-- Solution URL: [Solution URL here]
+- Solution URL: [Solution URL here](https://www.frontendmentor.io/solutions/body-mass-index-calculator-react-uDUrAAGYm6)
 - Live Site URL: [Live site URL here](https://body-mass-index-calculator-react.netlify.app/)
 
 ## My process
